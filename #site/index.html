@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <a href="{% url "blog:post_list" %}"> To main </a>
+            </nav>
+        </div>
+    </div>
     <div class="container">
         <div id="content">
             {% block content %}{% endblock %}
