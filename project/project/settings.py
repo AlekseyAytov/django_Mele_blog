@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
+    'taggit'
 ]
 
 MIDDLEWARE = [
@@ -78,11 +79,13 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE'  : 'django.db.backends.postgresql',
-        'HOST'    : 'localhost',
-        'USER'    : 'postgres',
-        'PASSWORD': 'Perun2203',
-        'NAME'    : 'mysite_blog'
+        # 'ENGINE'  : 'django.db.backends.postgresql',
+        # 'HOST'    : 'localhost',
+        # 'USER'    : 'postgres',
+        # 'PASSWORD': 'Perun2203',
+        # 'NAME'    : 'mysite_blog'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'sqlite3.db'
     }
 }
 
