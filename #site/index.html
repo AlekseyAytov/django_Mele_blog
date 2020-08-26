@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.css' %}">
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+
     <div class="header">
         <div class="container">
             <nav>
@@ -17,16 +19,27 @@
             </nav>
         </div>
     </div>
-    <div class="container">
-        <div id="content">
-            {% block content %}{% endblock %}
-        </div>
 
-        <div id="sidebar">
-            <h2>My blog</h2>
-            <p>This is my blog.</p>
+    <div class="main">
+        <div class="container main__container">
+            <div class="main__content">
+                {% block content %}{% endblock %}
+            </div>
+
+            <div class="main__sidebar">
+                <h2>My blog</h2>
+                <p>This is my blog.</p>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="wrapper">
+                made by Aleksey Aytov
+            </div>
+        </div>
+    </footer>
     
     <script src="{% static 'js/script.js' %}"></script>
 </body>
